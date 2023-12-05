@@ -14,7 +14,7 @@ const String cProgress = 'progress';
 /// so we can dispose when not needed anymore
 class LoaderOverlay extends StatefulWidget {
   const LoaderOverlay({
-    Key? key,
+    super.key,
     this.overlayWidgetBuilder,
     this.useDefaultLoading = useDefaultLoadingValue,
     this.overlayColor,
@@ -31,7 +31,7 @@ class LoaderOverlay extends StatefulWidget {
     this.layoutBuilder = AnimatedSwitcher.defaultLayoutBuilder,
     this.useBackButtonInterceptor = !kIsWeb,
     required this.child,
-  }) : super(key: key);
+  });
 
   final bool useBackButtonInterceptor;
 
@@ -95,11 +95,11 @@ class LoaderOverlay extends StatefulWidget {
   static const useDefaultLoadingValue = true;
 
   @override
-  _LoaderOverlayState createState() => _LoaderOverlayState();
+  LoaderOverlayState createState() => LoaderOverlayState();
 }
 
 // Has the Center CircularProgressIndicator as the default loader
-class _LoaderOverlayState extends State<LoaderOverlay> {
+class LoaderOverlayState extends State<LoaderOverlay> {
   OverlayControllerWidget? _overlayControllerWidget;
 
   @override
@@ -188,8 +188,8 @@ class _LoaderOverlayState extends State<LoaderOverlay> {
     dynamic progress,
   }) =>
       [
-        WillPopScope(
-          onWillPop: () async => !widget.disableBackButton,
+        PopScope(
+          canPop: !widget.disableBackButton,
           child: widget.overlayWholeScreen
               ? SizedBox.expand(
                   child: ColoredBox(

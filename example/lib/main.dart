@@ -22,7 +22,8 @@ class MyAppGlobalLoaderOverlay extends StatelessWidget {
       ),
       overlayColor: Colors.grey.withOpacity(0.8),
       useDefaultLoading: false,
-      overlayWidgetBuilder: (_) { //ignored progress for the moment
+      overlayWidgetBuilder: (_) {
+        //ignored progress for the moment
         return Center(
           child: SpinKitCubeGrid(
             color: Colors.red,

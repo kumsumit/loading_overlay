@@ -13,10 +13,10 @@ packages:
     dependency: transitive
     description:
       name: back_button_interceptor
-      sha256: "350ba92a6f218ab2b278c1a231ba4d9fe39a00eb1ea37c4a41b067bdc83dae96"
+      sha256: ba7d4f4d801e2f1367db35ecf8870cf954cd2c434a9e6208b10fe527b34eb873
       url: "https://pub.dev"
     source: hosted
-    version: "6.0.0"
+    version: "7.0.0"
   boolean_selector:
     dependency: transitive
     description:
@@ -81,7 +81,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "3.0.1"
+    version: "3.0.2"
   matcher:
     dependency: transitive
     description:
@@ -184,5 +184,5 @@ packages:
     source: hosted
     version: "0.3.0"
 sdks:
-  dart: ">=3.2.0-194.0.dev <4.0.0"
+  dart: ">=3.2.2 <4.0.0"
   flutter: ">=2.0.0"

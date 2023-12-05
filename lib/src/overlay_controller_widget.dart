@@ -6,9 +6,9 @@ import 'package:loader_overlay/loader_overlay.dart';
 ///The inherited widget that guarantees the behavior of the overlay
 class OverlayControllerWidget extends InheritedWidget {
   OverlayControllerWidget({
-    Key? key,
-    required Widget child,
-  }) : super(key: key, child: child);
+    super.key,
+    required super.child,
+  });
 
   static OverlayControllerWidget? of(BuildContext context) =>
       context.findAncestorWidgetOfExactType<OverlayControllerWidget>();

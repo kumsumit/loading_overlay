@@ -217,10 +217,10 @@ void main() {
 
 class TestApp extends StatelessWidget {
   const TestApp({
-    Key? key,
+    super.key,
     this.overlayWidgetBuilder,
     this.useDefaultLoading = LoaderOverlay.useDefaultLoadingValue,
-  }) : super(key: key);
+  });
 
   final Widget Function(dynamic progress)? overlayWidgetBuilder;
   final bool useDefaultLoading;
